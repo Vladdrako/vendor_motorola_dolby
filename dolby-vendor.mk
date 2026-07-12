@@ -11,6 +11,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/dolby/proprietary/system_ext/etc/permissions/com.motorola.frameworks.core.addon.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.motorola.frameworks.core.addon.xml \
     vendor/motorola/dolby/proprietary/system_ext/etc/permissions/com.motorola.motosignature.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.motorola.motosignature.xml \
     vendor/motorola/dolby/proprietary/system_ext/etc/permissions/com.motorola.software.dolbyui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.motorola.software.dolbyui.xml \
+    vendor/motorola/dolby/proprietary/system_ext/etc/permissions/moto-core_services.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/moto-core_services.xml \
     vendor/motorola/dolby/proprietary/system_ext/etc/permissions/moto-checkin.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/moto-checkin.xml \
     vendor/motorola/dolby/proprietary/system_ext/etc/permissions/moto-settings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/moto-settings.xml \
     vendor/motorola/dolby/proprietary/system_ext/etc/permissions/moto.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/moto.xml \
@@ -55,6 +56,7 @@ PRODUCT_PACKAGES += \
     daxService \
     com.motorola.frameworks.core.addon \
     com.motorola.motosignature \
+    moto-core_services \
     moto-checkin \
     moto-settings \
     moto \

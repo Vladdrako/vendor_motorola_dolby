@@ -67,6 +67,13 @@ dex_import {
 }
 
 dex_import {
+	name: "moto-core_services",
+	owner: "motorola",
+	jars: ["proprietary/system_ext/framework/moto-core_services.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "moto-checkin",
 	owner: "motorola",
 	jars: ["proprietary/system_ext/framework/moto-checkin.jar"],
