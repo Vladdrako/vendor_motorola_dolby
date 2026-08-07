@@ -1,4 +1,11 @@
--system_ext/framework/com.motorola.frameworks.core.addon.jar
+vendor/lib64/libcodec2.so
+vendor/lib64/libcodec2_hidl@1.0.so
+vendor/lib64/libcodec2_hidl@1.1.so
+vendor/lib64/libcodec2_soft_ac4dec.so
+vendor/lib64/libcodec2_soft_ddpdec.so
+vendor/lib64/libcodec2_store_dolby.so
+vendor/lib64/libcodec2_vndk.so
+vendor/lib64/libstagefright_bufferpool@2.0.1.so-system_ext/framework/com.motorola.frameworks.core.addon.jar
 -system_ext/framework/moto-core_services.jar
 -system_ext/framework/moto.jar
 -system_ext/framework/moto-checkin.jar
@@ -25,8 +32,10 @@ system_ext/etc/sysconfig/config-com.dolby.daxservice.xml
 -system_ext/priv-app/MotorolaSettingsProvider/MotorolaSettingsProvider.apk
 -system_ext/priv-app/MotoDolbyDax3/MotoDolbyDax3.apk
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
+vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc
 vendor/etc/media_codecs_dolby_audio.xml
 -vendor/etc/vintf/manifest/vendor.dolby.hardware.dms@2.0-service.xml
+-vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml
 vendor/etc/dolby/dax-default.xml
 vendor/lib64/libdeccfg.so
 vendor/lib64/soundfx/libswvqe.so
@@ -40,6 +49,7 @@ vendor/lib64/libstagefright_fdtn_dolby.so
 vendor/lib64/libstagefrightdolby.so
 vendor/lib64/hw/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/libstagefright_soft_ddpdec.so
+vendor/lib64/libcodec2_store_dolby.so
 vendor/lib/libdeccfg.so
 vendor/lib/libstagefright_fdtn_dolby.so
 vendor/lib/soundfx/libswvqe.so
@@ -55,3 +65,15 @@ vendor/lib/libdlbpreg.so
 vendor/lib/soundfx/libdlbvol.so
 vendor/lib64/soundfx/libdlbvol.so
 vendor/lib64/soundfx/libqcompostprocbundle.so
+vendor/bin/hw/vendor.dolby.media.c2@1.0-service
+vendor/lib64/libcodec2.so
+vendor/lib64/libcodec2_hidl@1.0.so
+vendor/lib64/libcodec2_hidl@1.1.so
+vendor/lib64/libcodec2_soft_ac4dec.so
+vendor/lib64/libcodec2_soft_ddpdec.so
+vendor/lib64/libcodec2_store_dolby.so
+vendor/lib64/libcodec2_vndk.so
+vendor/lib64/libstagefright_bufferpool@2.0.1.so
+vendor/etc/seccomp_policy/codec2.vendor.base-arm64.policy
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm64.policy
+

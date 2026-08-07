@@ -1,0 +1,50 @@
+cc_binary {
+    name: "vendor.dolby.media.c2@1.0-service",
+    vendor: true,
+    relative_install_path: "hw",
+
+    init_rc: ["vendor.dolby.media.c2@1.0-service.rc"],
+
+    defaults: [
+        "libcodec2-hidl-defaults",
+    ],
+
+    srcs: [
+        "vendor.cpp",
+    ],
+
+    shared_libs: [
+        "android.hardware.media.c2@1.0",
+        "android.hardware.media.c2@1.1",
+        "libavservices_minijail",
+        "libbase",
+        "libbinder",
+        "libcodec2",
+        "libcodec2_hidl@1.0",
+        "libcodec2_hidl@1.1",
+        "libcodec2_vndk",
+        "libcodec2_store_dolby",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+    ],
+
+    required: ["vendor.dolby.media.c2-seccomp_policy"],
+
+    vintf_fragments: ["manifest_vendor_dolby_media_c2.xml"],
+}
+
+prebuilt_etc {
+    name: "vendor.dolby.media.c2-seccomp_policy",
+    vendor: true,
+    sub_dir: "seccomp_policy",
+
+    arch: {
+        arm: {
+            src: "seccomp_policy/android.hardware.media.c2-default-arm.policy",
+        },
+        arm64: {
+            src: "seccomp_policy/android.hardware.media.c2-default-arm64.policy",
+        },
+    },
+}

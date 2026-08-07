@@ -103,3 +103,187 @@ prebuilt_etc_xml {
 	soc_specific: true,
 }
 
+cc_prebuilt_library_shared {
+	name: "libdeccfg",
+	owner: "lenovo",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/libdeccfg.so"],
+				shared_libs: [
+		"libhidlbase",
+		"vendor.dolby.hardware.dms@2.0",
+		"libc",
+		"libc++",
+		"libcutils",
+		"libdl",
+		"liblog",
+		"libm",
+		"libutils",
+	],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libdeccfg.so"],
+				shared_libs: [
+		"libhidlbase",
+		"vendor.dolby.hardware.dms@2.0",
+		"libc",
+		"libc++",
+		"libcutils",
+		"libdl",
+		"liblog",
+		"libm",
+		"libutils",
+	],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	vendor: true,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.dolby.hardware.dms@2.0",
+	owner: "lenovo",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/vendor.dolby.hardware.dms@2.0.so"],
+				shared_libs: [
+		"libhidlbase",
+		"libc",
+		"libc++",
+		"libcutils",
+		"libdl",
+		"liblog",
+		"libm",
+		"libutils",
+	],
+		},
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0.so"],
+				shared_libs: [
+		"libhidlbase",
+		"libc",
+		"libc++",
+		"libcutils",
+		"libdl",
+		"liblog",
+		"libm",
+		"libutils",
+	],
+		},
+	},
+	compile_multilib: "both",
+	check_elf_files: false,
+	vendor: true,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcodec2_store_dolby",
+	owner: "lenovo",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcodec2_store_dolby.so"],
+				shared_libs: [
+		"libbase",
+		"liblog",
+		"libcodec2",
+		"libcodec2_vndk",
+		"libutils",
+		"libc",
+		"libc++",
+		"libm",
+		"libz",
+		"libdl",
+	],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	vendor: true,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_soft_ddpdec",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcodec2_soft_ddpdec.so"],
+				shared_libs: [
+		"libhidlbase",
+		"vendor.dolby.hardware.dms@2.0",
+		"libdeccfg",
+		"libbase",
+		"libcodec2",
+		"libcodec2_vndk",
+		"libcodec2_soft_common",
+		"libcutils",
+		"liblog",
+		"libsfplugin_ccodec_utils",
+		"libstagefright_foundation",
+		"libcodec2_store_dolby",
+		"libc++",
+		"libc",
+		"libm",
+		"libdl",
+	],
+        },
+    },
+	compile_multilib: "64",
+	check_elf_files: false,
+    vendor: true,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_soft_ac4dec",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libcodec2_soft_ac4dec.so"],
+				shared_libs: [
+		"libhidlbase",
+		"vendor.dolby.hardware.dms@2.0",
+		"libdeccfg",
+		"libbase",
+		"libcodec2",
+		"libcodec2_vndk",
+		"libutils",
+		"libcodec2_soft_common",
+		"libcutils",
+		"liblog",
+		"libsfplugin_ccodec_utils",
+		"libstagefright_foundation",
+		"libcodec2_store_dolby",
+		"libc++",
+		"libc",
+		"libm",
+		"libdl",
+	],
+        },
+    },
+	compile_multilib: "64",
+	check_elf_files: false,
+    vendor: true,
+    prefer: true,
+}
